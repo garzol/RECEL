@@ -18,7 +18,7 @@ Nevertheless, it is quite a pain in the back to ensure a correct polarity all ac
 
 Moreover, there was no means to verify against a reference, since there was no reference available.
 
-Therefore, maybe the data must be inverted in one or the other way.
+Therefore, maybe the data must be inverted in one or the other way. But normally it is ok.
 
 The 256 bits are pure configuration, then it is impossible to check the contents since its can be anything.
 
