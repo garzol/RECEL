@@ -30,7 +30,7 @@ IO ident is not yet determined (0x4 or 0x2)
 
 
 Recel.txt is a disassembly coming from an old disassembler
-Recel2.txt is disassembled by a more recent app (available on ttps://rockwell.pps4.fr/dasm)
+Recel2.txt is disassembled by a more recent app (available on https://rockwell.pps4.fr/dasm)
 
 A1761-13 is also known as A2361
 A1762-13 is also known as A2362
