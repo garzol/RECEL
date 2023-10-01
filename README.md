@@ -59,5 +59,5 @@ To be up to date use the most recent app (available on line on https://rockwell.
 https://github.com/garzol/pps4Emul.git
 
 
-A1761-13 is also known as A2361
+A1761-13 is also known as A2361  
 A1762-13 is also known as A2362
