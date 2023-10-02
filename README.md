@@ -50,7 +50,7 @@ Since the Ttl side is positive logic, there is an implicit inversion of logic be
 
 This is why we need to invert everything from the initial binary to retrieve the code of the eprom.
 you can use pdtac.py for this purpose.
-1702_screech_invA_invD.bin is the exact inversion both on data and addresses of 1702.bin
+1702_screech_invA_invD.bin is the exact inversion both on data and addresses of 1702.bin.  
 1702_screech_invA_invD shall be used for disassembly (start address 0x800)
 
 ## Disassembly  
