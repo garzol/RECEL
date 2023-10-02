@@ -56,7 +56,11 @@ you can use pdtac.py for this purpose.
 ## Disassembly  
 Recel_screech.txt is a disassembly coming from an old disassembler
 To be up to date use the most recent app (available on line on https://rockwell.pps4.fr/dasm) or on github if you want to be offline:
-https://github.com/garzol/pps4Emul.git
+https://github.com/garzol/pps4Emul.git   
+
+commented disassembly here:   
+https://spider.pps4.fr/static/coegen/recel_screech.txt  
+(regular updates, as I make progress in this decompilation)  
 
 
 A1761-13 is also known as A2361  
