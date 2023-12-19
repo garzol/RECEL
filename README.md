@@ -16,7 +16,19 @@ Binary files were obtained from my A17 reading material.
 To read bin files, use something like:  
 `od -t x1 -A x BIN/A1761-13.bin`
 
-Each bin size is 2048 bytes even though the ROM size of an A176x is normally 1K. This is because size of pps4.com A17 clones is standard 2K. Thus, this explains why the second half of them is all 0s.
+The size of an A17xx ROM is 2KB (A1..A11 + RRSEL). Hence, Each bin size is 2048 bytes even though the ROM size of an A176x is normally 1K. Reading an A176x chip shows that the second half of its ROM is all 0 (not programmed). 0 in PPS-4 logic means VSS, or +5V. 
+
+| :exclamation:  A176x ROM has a size of 2KB, but  the second half is all 0 (not programmed) | 
+|-----------------------------------------|  
+  
+
+
+| :zap:    RECEL Hardware does not use A11, which is directly connected to VSS                  |
+|-----------------------------------------|  
+
+
+
+
 
 ## Config of A17 chips  
 - A1761-13 internal Config:  
