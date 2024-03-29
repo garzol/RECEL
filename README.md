@@ -96,3 +96,45 @@ https://spider.pps4.fr/static/coegen/recel_screech.txt
 
 A1761-13 or A1761-14 are also known as A2361  
 A1762-13 or A1762-14 are also known as A2362
+
+## PIO 11696 commands
+`IOL	XY`  
+`X is the device ID, OxD on the sys3`  
+`Y is the command` 
+
+### Command codes
+#### Read/Write IO  
+
+| Group#        |  Read=>(A)    | Write<=(A) |
+| ------------- | ------------- | ---------- |
+|            A  | 0             | 8          | 
+|            B  | 1             | 9          | 
+|            C  | 2             | A          | 
+|            D  | 3             | F          | 
+|            E  | 4             | C          | 
+|            F  | 5             | D          |
+
+#### Set/Reset specific bit
+SET: Command is `IOL X6 with Acc as in the table below`   
+RESET: Command is `IOL XB with Acc as in the table below` 
+
+
+| Group#-bit#   | (A) [6=set B=reset] |
+| ------------- | ------------------- | 
+|       A-1     | F                   | 
+|       A-2     | E                   | 
+|       A-4     | D                   | 
+|       A-8     | C                   | 
+|       B-1     | B                   | 
+|       B-2     | A                   | 
+|       B-4     | 9                   | 
+|       B-8     | 8                   | 
+|       C-1     | 7                   | 
+|       C-2     | 6                   | 
+|       C-4     | 5                   | 
+|       C-8     | 4                   | 
+|       D-1     | 3                   | 
+|       D-2     | 2                   | 
+|       D-4     | 1                   | 
+|       D-8     | 0                   | 
+|
