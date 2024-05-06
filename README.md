@@ -105,14 +105,16 @@ A1762-13 or A1762-14 are also known as A2362
 ### Command codes
 #### Read/Write IO  
 
-| Group#        |  Read=>(A)    | Write<=(A) |
-| ------------- | ------------- | ---------- |
-|            A  | 0             | 8          | 
-|            B  | 1             | 9          | 
-|            C  | 2             | A          | 
-|            D  | 3             | F          | 
-|            E  | 4             | C          | 
-|            F  | 5             | D          |
+| Group#        | Write(A)==>port | Read port==>(A) |
+| ------------- | --------------- | ----------------|
+|            A  | 0               | 8               | 
+|            B  | 1               | 9               | 
+|            C  | 2               | A               | 
+|            D  | 3               | F               | 
+|            E  | 4               | C               | 
+|            F  | 5               | D               |
+
+On a write operation, the returned value (placed in A) is the state of the port before the call  
 
 #### Set/Reset specific bit
 SET: Command is `IOL X6 with Acc as in the table below`   
@@ -137,4 +139,10 @@ RESET: Command is `IOL XB with Acc as in the table below`
 |       D-2     | 2                   | 
 |       D-4     | 1                   | 
 |       D-8     | 0                   | 
-|
+
+
+Returned value is the bit# inside the group that was just modified. (80% certainty. Not sure 100%)  
+
+
+
+
