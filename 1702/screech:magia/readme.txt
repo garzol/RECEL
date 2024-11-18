@@ -1,3 +1,11 @@
+2024-11_18
+
+I compared the obtained 1702 binary and sc4.bin from recel_games.zip
+==>They are identical.
+
+
+
+
 2023-09-22
 
 I got 3 eproms from Paulo Gordinho.
