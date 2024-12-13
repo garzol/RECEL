@@ -1,20 +1,38 @@
 2024-08-01
 
-## Origin of this zip file
+## Origin of this zip file  
+In the following, what we call *this file* is recel_games.zip that we have decompressed to build the present directory.  
+
 This file contains all games of the recel system 3 series.  
 
 This file comes from recreativas.org, and was likely originally made by or for Mame project.  
 
 Apart from the comments below, all these binaries are validated and can be considered good  
 
-## The double inversion story.  
+
+## Purpose of such files.  
+This binary files (extension .c5) are destinated to make eproms (mainly 2716) for recel sys3 MPUs.
+There are 2 HW versions of such MPU:  
+1. Original version : There is a game prom (either a 1702A or 2716, or even whatever...) which contains specific game variant for a given game (15 different games exist). This game prom contains short subroutines that are called by the main program, which is common to all games, and resides in the ROM sections of B1 and B2. (2KB of code). B1 (A1761) from 0x000..0x3FF contains the startup boot address (at 0x000). B2 (A1762), prolonges the code from 0x400..0x7FF. Speifics for a particular game for example is how much points for hitting which target, this sort of things...  
+
+2. Version 2 : In this version, B1 is still used just the same way as in V1. But B2 is disabled (ROM subsection only) and its equivalent 0x400..0x7FF is remapped in the game prom (locally from 0x400..0x7FF, in the eprom, this time), while the game variant is located in 0x000..0x3FF of the eprom, which is seen as from 0x800 from the cpu point of view.). Instead of 256B available as in V1, there are now 1KB available of game variant in V2.  
+
+All this binary data (In B1, B2, or eprom) are PPS4 assembly code.  
+Since, the eprom is accessed through BIC interface, and also because PPS4 logic is **negative**, you won't read pps4 assembly code directly from a .c5 file. If you want to disassemble this binary you need to invert both addresses and data first. Then you'll get PPS4  mnemonics.  
+
 Since game proms are read by the MPU through PPS4 BIC chips, that use negative logic, you have to invert both addresses and data to make a bin image from a '.c5' file. 
+
+> [!IMPORTANT]  
+> In summary, to make game prom, use .c5 files. To disassemble or use directly the code with, for example, an emulator, you'll have to make the double 
+
 
 ### Example
 from fa.c5 (from internet) is derived by double inversion (data+addresses) fa.bin.  
 command for double inversion is something like:  
 
-```python3 ../pdtac.py sc.c5  > sc4.bin```
+```
+python3 ../pdtac.py sc.c5  > sc4.bin
+```
 
 
 
@@ -30,7 +48,10 @@ crA1762.bin is crazy race A1762 1KB to be mapped at 0x400..0x7FF
 
 diferences between original A1762 bin and crA1762...  
 
-```cmp -x  crA1762.bin A1762-13_1K.bin```  
+```
+cmp -x  crA1762.bin A1762-13_1K.bin
+```
+
 > 0000004e 59 50  
 > 0000004f 80 0b    
 > 000002fe 34 00  
