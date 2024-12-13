@@ -92,8 +92,7 @@ The version cointained in the original recel_games.zip is wrong, for some reason
 
 The good one was given by EdC later at our demand. It is pokerplus_BA65_EdC.BIN (before double inversion)
 Then the good binary file is pokerplus_BA65.BIN (double inversion of pokerplus_BA65_EdC.BIN)
-can also be found on ralf site:
-[Ralf' site](https://lisy.dev/swrep/RecelFA/game_roms/)
+can also be found on [Ralf' site](https://lisy.dev/swrep/RecelFA/game_roms/).
 
 
 
